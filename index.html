@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>☁️ WeatherNow</h1>
+
+  <div class="search-box">
+    <input type="text" id="cityInput" placeholder="Enter city">
+    <button id="searchBtn">Search</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="current-weather">
+    <div class="left">
+      <div id="weatherIcon">☀️</div>
+      <div>
+        <h2 id="cityName">Loading...</h2>
+        <p id="weatherDesc">Weather</p>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="card">
+        <h3 id="temp">--</h3>
+        <p>TEMP °C</p>
+      </div>
+
+      <div class="card">
+        <h3 id="wind">--</h3>
+        <p>WIND</p>
+      </div>
+
+      <div class="card">
+        <h3 id="humidity">--</h3>
+        <p>HUMIDITY</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="chart-section">
+    <h2>24-HOUR TEMPERATURE</h2>
+    <canvas id="tempChart" width="1000" height="350"></canvas>
+  </div>
+
+  <div class="forecast-section">
+    <h2>7-DAY FORECAST</h2>
+    <div id="forecast" class="forecast-grid"></div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
